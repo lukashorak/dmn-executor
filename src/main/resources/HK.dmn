@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_0npn0je" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.4.1">
+  <decision id="Decision_17d3ytd" name="HK">
+    <extensionElements>
+      <biodi:bounds x="174" y="163" width="180" height="80" />
+      <biodi:edge source="InputData_11xml3u">
+        <biodi:waypoints x="412" y="176" />
+        <biodi:waypoints x="354" y="183" />
+      </biodi:edge>
+      <biodi:edge source="InputData_0ofqymf">
+        <biodi:waypoints x="386" y="126" />
+        <biodi:waypoints x="314" y="163" />
+      </biodi:edge>
+      <biodi:edge source="InputData_0hqrr6u">
+        <biodi:waypoints x="254" y="275" />
+        <biodi:waypoints x="242" y="243" />
+      </biodi:edge>
+      <biodi:edge source="InputData_02xivqj">
+        <biodi:waypoints x="435" y="228" />
+        <biodi:waypoints x="354" y="212" />
+      </biodi:edge>
+      <biodi:edge source="InputData_1r3608a">
+        <biodi:waypoints x="378" y="295" />
+        <biodi:waypoints x="330" y="243" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredInput href="#InputData_11xml3u" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_0hqrr6u" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_0ofqymf" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_02xivqj" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_1r3608a" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_00ph1im" hitPolicy="FIRST">
+      <input id="InputClause_09dho8i" label="Incorporation">
+        <inputExpression id="LiteralExpression_1t30f6r" typeRef="string">
+          <text>incorportion</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0fz9tri" label="Headquarter">
+        <inputExpression id="LiteralExpression_1pi3jr8" typeRef="string">
+          <text>headquarter</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_17o0s4q" label="RevenueFromChina">
+        <inputExpression id="LiteralExpression_1211lgo" typeRef="double">
+          <text>revenueFromChina</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1eo29xd" label="IsCurrent-SXCNPTP">
+        <inputExpression id="LiteralExpression_15zri1t" typeRef="boolean">
+          <text>isCurrent</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ho7jsc" label="IsRedChip">
+        <inputExpression id="LiteralExpression_0hi0pfp" typeRef="boolean">
+          <text>isRedChip</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_07ss374" label="ISO_Curr">
+        <inputExpression id="LiteralExpression_1dv003x" typeRef="string">
+          <text>iSO_Curr</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1bkp39m" label="TMI_Region" name="outputPchip" typeRef="string" />
+      <rule id="DecisionRule_0yisov9">
+        <inputEntry id="UnaryTests_0a4t49t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1563w0c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_080tucr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ceroqo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0as6anj">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qzp7t3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_121b948">
+          <text>"Red-Chips"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qmdbcn">
+        <inputEntry id="UnaryTests_0giq2i2">
+          <text>not("CHN")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1thzrr8">
+          <text>"HKG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17jdhec">
+          <text>[0.7..1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16gscsa">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0849k2i">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wmxelh">
+          <text>"HKD"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17a7drp">
+          <text>"P-Chips"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ilkgmz">
+        <inputEntry id="UnaryTests_1a6wfpz">
+          <text>not("CHN")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1axwqpj">
+          <text>"CHN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_182yb7v">
+          <text>[0.6..1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zlg58p">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mzyjjt">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09j19m6">
+          <text>"HKD"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ui0a5s">
+          <text>"P-Chips"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c4k8rh">
+        <inputEntry id="UnaryTests_1q92cet">
+          <text>not("CHN")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03gqnr5">
+          <text>"HKG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wtf932">
+          <text>[0.8..1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0de0t5f">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_022hjpw">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bl5yfm">
+          <text>"HKD"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03v4bh5">
+          <text>"P-Chips"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11adleh">
+        <inputEntry id="UnaryTests_0m5mnjc">
+          <text>not("CHN")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iwgisx">
+          <text>"CHN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vcj77w">
+          <text>[0.7..1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q0xcsp">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c8xn9s">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14z1ymj">
+          <text>"HKD"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15cp1jd">
+          <text>"P-Chips"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_173e4w0">
+        <inputEntry id="UnaryTests_0n6760m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gaustb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0097xw4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qtjng5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p707mw">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mcz9y9">
+          <text>"HKD"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bb7ixk">
+          <text>"AMAS HK"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_11xml3u" name="RevenueFromChina">
+    <extensionElements>
+      <biodi:bounds x="412" y="158" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="InputData_02xivqj" name="Headquarter">
+    <extensionElements>
+      <biodi:bounds x="435" y="218" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="InputData_0hqrr6u" name="Incorporation">
+    <extensionElements>
+      <biodi:bounds x="156" y="275" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="InputData_0ofqymf" name="IsCurrent-SXCNPTP">
+    <extensionElements>
+      <biodi:bounds x="366" y="81" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="InputData_1r3608a" name="IsRedChip">
+    <extensionElements>
+      <biodi:bounds x="336" y="295" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+</definitions>
