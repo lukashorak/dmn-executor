@@ -47,7 +47,7 @@ public class Decider {
         return true;
     }
 
-    public String decideFromTwoList(String[] variableNames, String[] values){
+    public Object decideFromTwoList(String[] variableNames, Object[] values){
 
         VariableMap variables = Variables.createVariables();
 
@@ -58,7 +58,7 @@ public class Decider {
         DmnDecisionTableResult result = dmnEngine.evaluateDecisionTable(decision, variables);
 
         // print result
-        String singleResult = result.getSingleResult().getSingleEntry();
+        Object singleResult = result.getSingleResult().getSingleEntry();
         System.out.println("Decision: " + singleResult);
 
         return singleResult;
