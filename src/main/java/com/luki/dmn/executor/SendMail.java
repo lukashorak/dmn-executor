@@ -7,7 +7,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 
 public class SendMail {
 
-    public static void main(String... args){
+    public static void main2(String... args){
         try {
             sendSimpleMessage();
         } catch (UnirestException e) {

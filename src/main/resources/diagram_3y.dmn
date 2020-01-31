@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_05bheoj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.4.1">
+  <decision id="decision" name="Decision 1">
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="Region">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>region</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0v7i1f6" label="MIC">
+        <inputExpression id="LiteralExpression_11jgfpt" typeRef="string">
+          <text>mIC</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ucuvot" label="MIC_desc">
+        <inputExpression id="LiteralExpression_0vxno6h" typeRef="string">
+          <text>mIC_desc</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Elegible-market" name="Elegible-market" typeRef="boolean" />
+      <output id="OutputClause_15ffuab" label="output2" name="output2" typeRef="string" />
+      <rule id="DecisionRule_11fio73">
+        <inputEntry id="UnaryTests_1uer0n9">
+          <text>"AR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1urn70v">
+          <text>"XBUE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wo7ib8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0w9fbrc">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v72s18">
+          <text>"XX"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14uta7t">
+        <inputEntry id="UnaryTests_0m4il39">
+          <text>"AT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vmmscx">
+          <text>"WBAH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vm0m0c">
+          <text>"Prime OM"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mdhne5">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01398ze">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03pj79t">
+        <inputEntry id="UnaryTests_1qw880q">
+          <text>"BE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ee64a6">
+          <text>"XBRU"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fg39yg">
+          <text>"Segment A","Segment B","Segment C"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1daihxs">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0le28ar">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fj9u0c">
+        <inputEntry id="UnaryTests_10xyvn3">
+          <text>"BE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bbd887">
+          <text>"ALXB","MLXB","VPXB"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07j20y7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sbp9f9">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gtsbc6">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m5rwhu">
+        <inputEntry id="UnaryTests_1glfhvd">
+          <text>"CH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0am4gt8">
+          <text>"XSWX"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rugqg4">
+          <text>"SWX"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1besx99">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h3p2ii">
+          <text>"YY"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_123dzml">
+        <inputEntry id="UnaryTests_197mtil">
+          <text>"CH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1okwiml">
+          <text>"XVTX"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pa9e89">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ykwnpp">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07yqaxc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07iyjo6">
+        <inputEntry id="UnaryTests_1beh656">
+          <text>"DE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03b70l7">
+          <text>"XETA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07bjuig">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q6afuh">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05wh5im">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xtil5l">
+        <inputEntry id="UnaryTests_0xlts3y">
+          <text>"DK"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b3silo">
+          <text>"XCSE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1449o1f">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ybxx5r">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e755ow">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1g9p1gn">
+        <inputEntry id="UnaryTests_061b1h2">
+          <text>"DK"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f57g2j">
+          <text>"DSME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mw0ia6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kojt6m">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hkqkby">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yx9w7t">
+        <inputEntry id="UnaryTests_125h4li">
+          <text>"ES"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1exu3xp">
+          <text>"XMAD"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09n439r">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06iwf6t">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ohf13t">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_178uepg">
+        <inputEntry id="UnaryTests_0b4sfh6">
+          <text>"ES"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05388jb">
+          <text>"XLAT","MABX"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xnpf8i">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fpq6ka">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w7801y">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c0ljgr">
+        <inputEntry id="UnaryTests_0bl8z7h">
+          <text>"FI"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sx9ma8">
+          <text>"FSME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vv3ee4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pw8x8f">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1filvhz">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1svmjwt">
+        <inputEntry id="UnaryTests_1wo38qf">
+          <text>"FI"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v7vyy6">
+          <text>"XHEL"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bziyjq">
+          <text>"Large cap","Medium Cap","Small Cap"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lvzqa8">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wcgkyc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qi30le">
+        <inputEntry id="UnaryTests_0pip2jp">
+          <text>"FI"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gk1b91">
+          <text>"XHEL"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tbd4t3">
+          <text>"Prelist","Swedish Shares"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bixmti">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18uym9l">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hi34ev">
+        <inputEntry id="UnaryTests_1rhl600">
+          <text>"FR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w3eacq">
+          <text>"XPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06d0bgo">
+          <text>"Segment A","Segment B","Segment C"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18sf7o9">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1grt0vd">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17we461">
+        <inputEntry id="UnaryTests_08ga8xs">
+          <text>"FR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n41y7q">
+          <text>"ALXP","XMLI"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09cdrr7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_072u4mw">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fusi80">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wftupx">
+        <inputEntry id="UnaryTests_1gj77ca">
+          <text>"GB"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hm97ki">
+          <text>"AIMX","ECHO","XLOM"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kwa4km">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nw3kkn">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ljyepx">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12f0f9x">
+        <inputEntry id="UnaryTests_12n2hla">
+          <text>"GB"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fw0wj1">
+          <text>"XLON"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03p3gtn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_100pjr9">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r6uysy">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02ak2ro">
+        <inputEntry id="UnaryTests_1bx1i93">
+          <text>"GR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16qf95k">
+          <text>"ENAX"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16jsk4y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1054wee">
+          <text>falsae</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bsq5xd">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09zyv5c">
+        <inputEntry id="UnaryTests_1gdme58">
+          <text>"GR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c5htt7">
+          <text>"XATH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18bpxjr">
+          <text>"Main Market"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0089dyq">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ocucmq">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xmhlle">
+        <inputEntry id="UnaryTests_0hi4ct2">
+          <text>"IE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eqjjp9">
+          <text>"XESM"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lxz46a">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ableum">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_159irlr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_045li9v">
+        <inputEntry id="UnaryTests_13vbdc1">
+          <text>"IE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1epu4k1">
+          <text>"XMSM"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09s44az">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12bwtus">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19ienir">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bbqn97">
+        <inputEntry id="UnaryTests_0pxbkr9">
+          <text>"IS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00tcu9o">
+          <text>"FNIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03dwjew">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l6u3gx">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l6cypr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_142mjms">
+        <inputEntry id="UnaryTests_1kn3uup">
+          <text>"IS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wfef5w">
+          <text>"XICE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p729zs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a7avbb">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e9wdtr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gmbxil">
+        <inputEntry id="UnaryTests_0682rd3">
+          <text>"IT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0smq36i">
+          <text>"MIVX:,"XAIM:,"MTAH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vaa224">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k2c2im">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17ijlpp">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09ocu3b">
+        <inputEntry id="UnaryTests_1uo3exa">
+          <text>"IT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kgu5q0">
+          <text>"MTAA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u9veyn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1i9cj11">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09ug7e5">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1c6a5xu">
+        <inputEntry id="UnaryTests_1f6i6t4">
+          <text>"NL"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x6zscn">
+          <text>"XAMS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1an8rl1">
+          <text>"Segment A","Segment B","Segment C"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qe4x1a">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01hnx4y">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tqlxgn">
+        <inputEntry id="UnaryTests_09msihs">
+          <text>"NO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rqp9fo">
+          <text>"MERK","XOAS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p3fxs6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s0a9e5">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rfrax2">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17syj0v">
+        <inputEntry id="UnaryTests_0zw3dx2">
+          <text>"NO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_034i9z8">
+          <text>"XOSL"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dq5puj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cuw6vt">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bxyrs0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_075q5ax">
+        <inputEntry id="UnaryTests_0ri6nzh">
+          <text>"PT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07y6hni">
+          <text>"XLIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvffz3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tqxn9a">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1raxipt">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qfg2l8">
+        <inputEntry id="UnaryTests_13bknmk">
+          <text>"PT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_117337s">
+          <text>"ENXL","ALXL"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w5u961">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b0g5vq">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ausmv8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qdk99h">
+        <inputEntry id="UnaryTests_1fsjy9r">
+          <text>"SE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q8cl6x">
+          <text>"NMTF","SSME","XNGM"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0og4gko">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iz0xw6">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mlvoan">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t2901h">
+        <inputEntry id="UnaryTests_1d35z7c">
+          <text>"SE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_110115r">
+          <text>"XSTO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mxppm5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0muwhre">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qyspvv">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

@@ -51,6 +51,21 @@ public class Decider {
         return true;
     }
 
+    public Boolean initFromResource(String resourceName){
+        dmnEngine = DmnEngineConfiguration.createDefaultDmnEngineConfiguration().buildEngine();
+
+        // parse decision from resource input stream
+//        try (InputStream inputStream = Decider.class.getResourceAsStream("/dish-decision.dmn11.xml")) {
+//            decision = dmnEngine.parseDecision("decision", inputStream);
+//        }
+        try (InputStream inputStream = Decider.class.getResourceAsStream(resourceName)) {
+            decision = dmnEngine.parseDecision("decision", inputStream);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
     public Object decideFromTwoList(String[] variableNames, Object[] values){
 
         VariableMap variables = Variables.createVariables();
