@@ -11,6 +11,10 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 public class Decider {
     public Decider() throws IOException {
@@ -63,6 +67,31 @@ public class Decider {
 
         return singleResult;
     }
+
+    public Object[] decideFromTwoListToArray(String[] variableNames, String[] output, Object[] values){
+
+        VariableMap variables = Variables.createVariables();
+
+        for (int i = 0;i<variableNames.length;i++){
+            variables.putValue(variableNames[i],values[i]);
+        }
+
+        DmnDecisionTableResult result = dmnEngine.evaluateDecisionTable(decision, variables);
+
+        // print result
+        List<Object> list = new ArrayList<>();
+
+        Map map = result.getSingleResult().getEntryMap();
+
+        for(String o: output){
+            list.add(map.get(o));
+        }
+
+        System.out.println("Decision: " + Arrays.toString(list.toArray()));
+
+        return list.toArray();
+    }
+
 
     public String decideHK(String... args){
 
