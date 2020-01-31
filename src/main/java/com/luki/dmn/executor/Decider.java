@@ -51,6 +51,19 @@ public class Decider {
         return true;
     }
 
+    public Boolean initFromStrByName(String dmn, String decisionName){
+
+        dmnEngine = DmnEngineConfiguration.createDefaultDmnEngineConfiguration().buildEngine();
+
+        // parse decision from resource input stream
+        try (InputStream inputStream = new ByteArrayInputStream(dmn.getBytes(StandardCharsets.UTF_8))) {
+            decision = dmnEngine.parseDecision(decisionName, inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
     public Boolean initFromResource(String resourceName){
         dmnEngine = DmnEngineConfiguration.createDefaultDmnEngineConfiguration().buildEngine();
 
