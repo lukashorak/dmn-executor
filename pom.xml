@@ -6,7 +6,7 @@
 
     <groupId>com.luki.dmn</groupId>
     <artifactId>dmn-executor</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.8-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.target>1.7</maven.compiler.target>
